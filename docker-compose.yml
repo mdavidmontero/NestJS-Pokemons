@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  db: 
+    image: mongodb/mongodb-community-server:latest
+    restart: always
+    environment:
+      MONGO_DATABASE: nest-pokedex
+
+    ports:
+      - 27017:27017
+    volumes:
+      - ./mongo:/data/db
+
